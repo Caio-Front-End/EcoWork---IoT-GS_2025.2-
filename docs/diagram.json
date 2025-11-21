@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard-half",
+      "id": "bb1",
+      "top": -137.4,
+      "left": -554,
+      "attrs": {}
+    },
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -192,
+      "left": -743.96,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -274.4,
+      "left": -496.98,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -287.7,
+      "left": -360.6,
+      "attrs": { "temperature": "45.7", "humidity": "84.5" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -483.2,
+      "left": -503.2,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -189,
+      "left": -174.8,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay1",
+      "top": -278.2,
+      "left": -153.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -406.8,
+      "left": -553,
+      "attrs": { "color": "red", "flip": "" }
+    }
+  ],
+  "connections": [
+    ["esp:TX", "$serialMonitor:RX", "", []],
+    ["esp:RX", "$serialMonitor:TX", "", []],
+    ["esp:5V", "bb1:bp.1", "red", ["h0.15", "v48"]],
+    ["esp:GND.1", "bb1:bn.1", "black", ["h-9.45", "v105.6"]],
+    ["pir1:VCC", "bb1:bp.3", "red", ["v0"]],
+    ["pir1:GND", "bb1:bn.5", "black", ["v0"]],
+    ["pir1:OUT", "esp:26", "green", ["h-96.14", "v96"]],
+    ["dht1:VCC", "bb1:bp.11", "red", ["v0"]],
+    ["dht1:GND", "bb1:bn.14", "black", ["v0"]],
+    ["dht1:SDA", "esp:27", "blue", ["v9.6", "h-163.1", "v96"]],
+    ["lcd1:SDA", "esp:21", "gold", ["h-134.4", "v317"]],
+    ["lcd1:SCL", "esp:22", "violet", ["h0"]],
+    ["lcd1:GND", "bb1:bn.2", "black", ["h-19.2", "v510.1"]],
+    ["lcd1:VCC", "bb1:bp.2", "red", ["h-9.6", "v489.7"]],
+    ["ldr1:AO", "esp:34", "white", ["h-76.8", "v-143.3", "h-489.75"]],
+    ["ldr1:VCC", "bb1:bp.25", "red", ["h-38.4", "v192"]],
+    ["ldr1:GND", "bb1:bn.25", "black", ["h-48", "v221.2"]],
+    ["relay1:IN", "esp:5", "cyan", ["h-19.2", "v-57.8", "h-403.2", "v220.8"]],
+    ["relay1:GND", "bb1:bn.24", "black", ["h-48", "v326", "h-19.2"]],
+    ["relay1:VCC", "bb1:bp.24", "red", ["h0"]],
+    ["led1:A", "esp:18", "purple", ["v0"]]
+  ],
+  "dependencies": {}
+}
