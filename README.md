@@ -18,10 +18,10 @@ Muitos escritórios e ambientes corporativos desperdiçam energia elétrica mant
 O **EcoWork** é um sistema IoT baseado em ESP32 focado na eficiência energética. Ele monitora a ocupação da sala e as condições ambientais para automatizar o controle de dispositivos, garantindo economia sem sacrificar o conforto.
 
 **Principais Funcionalidades:**
-1.  [cite_start]**Detecção de Presença (PIR):** Ativa o sistema apenas quando a sala está ocupada[cite: 10, 25].
-2.  [cite_start]**Modo ECO Automático:** Se não houver movimento por um tempo determinado (configurado para 10s em testes), o sistema desliga relés e luzes[cite: 12, 27].
-3.  **Light Harvesting (Colheita de Luz):** Ajusta a intensidade da iluminação LED (via PWM) inversamente à luz natural detectada pelo LDR. [cite_start]Se houver muita luz solar, a luz artificial é reduzida ou desligada [cite: 28-31].
-4.  [cite_start]**Monitoramento Climático:** Alerta se a temperatura ultrapassar 24°C enquanto a sala estiver ocupada[cite: 32].
+1.  **Detecção de Presença (PIR):** Ativa o sistema apenas quando a sala está ocupada.
+2.  **Modo ECO Automático:** Se não houver movimento por um tempo determinado (configurado para 10s em testes), o sistema desliga relés e luzes.
+3.  **Light Harvesting (Colheita de Luz):** Ajusta a intensidade da iluminação LED (via PWM) inversamente à luz natural detectada pelo LDR. Se houver muita luz solar, a luz artificial é reduzida ou desligada.
+4.  **Monitoramento Climático:** Alerta se a temperatura ultrapassar 24°C enquanto a sala estiver ocupada.
 5.  **Dashboard em Tempo Real:** Integração via MQTT com Node-RED para visualização de dados.
 
 ---
@@ -45,12 +45,12 @@ O **EcoWork** é um sistema IoT baseado em ESP32 focado na eficiência energéti
 
 O dispositivo publica dados periodicamente no broker MQTT público.
 
-* [cite_start]**Broker:** `44.223.43.74` [cite: 8]
+* **Broker:** `44.223.43.74` 
 * **Porta:** `1883`
-* [cite_start]**Tópico de Publicação:** `ecowork/sala01` [cite: 9]
+* **Tópico de Publicação:** `ecowork/sala01`
 
 ### Estrutura do Payload (JSON)
-[cite_start]O dispositivo envia uma string JSON a cada 2 segundos (para fins de teste) com o seguinte formato[cite: 38, 39]:
+O dispositivo envia uma string JSON a cada 2 segundos (para fins de teste) com o seguinte formato:
 
 ```json
 {
@@ -62,3 +62,43 @@ O dispositivo publica dados periodicamente no broker MQTT público.
   "luz_art": 0,           // Nível do PWM do LED (0-255)
   "alerta": 1             // 1 se Temp > 24°C, 0 caso contrário
 }
+```
+
+---
+
+## 💻 Como Replicar (Instruções)
+
+### 1. Simulação Online (Wokwi)
+Você pode acessar e testar o projeto diretamente no navegador através do link abaixo:
+
+🔗 **[Acessar Simulação no Wokwi](INSIRA_O_LINK_DO_PROJETO_WOKWI_AQUI)**
+
+### 2. Configuração Física
+1.  Monte o circuito conforme o diagrama na pasta `/docs`.
+2.  Instale as bibliotecas necessárias na Arduino IDE:
+    * `LiquidCrystal I2C`
+    * `DHT sensor library`
+    * `PubSubClient`
+3.  Carregue o código disponível em `/src/main.cpp` para o ESP32.
+
+### 3. Dashboard (Node-RED)
+1.  Instale o Node-RED e o pacote `node-red-dashboard`.
+2.  Importe o arquivo `dashboard/node-red-flows.json`.
+3.  Acesse o dashboard em `http://localhost:1880/ui`.
+
+---
+
+## 📸 Imagens e Demonstração
+
+### Diagrama do Circuito
+![Diagrama do Circuito](docs/INSIRA_NOME_DA_IMAGEM_DO_CIRCUITO.png)
+*(Dica: Tire um print da tela do Wokwi e coloque na pasta /docs)*
+
+### Dashboard Node-RED
+![Dashboard Node-RED](docs/INSIRA_NOME_DA_IMAGEM_DO_DASHBOARD.png)
+*(Dica: Tire um print da tela do Node-RED Dashboard rodando)*
+
+### Vídeo Explicativo
+Assista à demonstração completa do funcionamento e explicação do código no YouTube:
+
+[![Vídeo Demonstração](https://img.youtube.com/vi/INSIRA_ID_DO_VIDEO/0.jpg)](INSIRA_LINK_COMPLETO_DO_VIDEO_AQUI)
