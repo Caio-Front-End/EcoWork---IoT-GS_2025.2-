@@ -95,6 +95,7 @@ Você pode acessar e testar o projeto diretamente no navegador através do link 
 
 ### Dashboard Node-RED
 ![Dashboard Node-RED](docs/diagrama-dashboard.png)
+![Dashboard Node-RED](docs/dashboard-visual.png)
 
 ### Vídeo Explicativo
 Assista à demonstração completa do funcionamento e explicação do código no YouTube:
