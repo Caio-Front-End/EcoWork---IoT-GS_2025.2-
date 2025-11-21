@@ -92,11 +92,9 @@ Você pode acessar e testar o projeto diretamente no navegador através do link 
 
 ### Diagrama do Circuito
 ![Diagrama do Circuito](docs/diagrama-conexoes.png)
-*(Dica: Tire um print da tela do Wokwi e coloque na pasta /docs)*
 
 ### Dashboard Node-RED
-![Dashboard Node-RED](docs/INSIRA_NOME_DA_IMAGEM_DO_DASHBOARD.png)
-*(Dica: Tire um print da tela do Node-RED Dashboard rodando)*
+![Dashboard Node-RED](docs/diagrama-dashboard.png)
 
 ### Vídeo Explicativo
 Assista à demonstração completa do funcionamento e explicação do código no YouTube:
