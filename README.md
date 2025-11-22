@@ -99,4 +99,4 @@ Você pode acessar e testar o projeto diretamente no navegador através do link 
 
 ### Vídeo Explicativo
 Assista à demonstração completa do funcionamento e explicação do código no YouTube:
-🔗 **[Acessar Simulação no Wokwi](youtube.com/watch?v=tavAso5dFQw&feature=youtu.be)**
+🔗 **youtube.com/watch?v=tavAso5dFQw&feature=youtu.be**
