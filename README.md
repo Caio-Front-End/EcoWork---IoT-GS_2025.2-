@@ -71,7 +71,7 @@ O dispositivo envia uma string JSON a cada 2 segundos (para fins de teste) com o
 ### 1. Simulação Online (Wokwi)
 Você pode acessar e testar o projeto diretamente no navegador através do link abaixo:
 
-🔗 **[Acessar Simulação no Wokwi](INSIRA_O_LINK_DO_PROJETO_WOKWI_AQUI)**
+🔗 **[Acessar Simulação no Wokwi](https://wokwi.com/projects/448075828104894465)**
 
 ### 2. Configuração Física
 1.  Monte o circuito conforme o diagrama na pasta `/docs`.
@@ -100,4 +100,4 @@ Você pode acessar e testar o projeto diretamente no navegador através do link 
 ### Vídeo Explicativo
 Assista à demonstração completa do funcionamento e explicação do código no YouTube:
 
-[![Vídeo Demonstração](https://img.youtube.com/vi/INSIRA_ID_DO_VIDEO/0.jpg)](INSIRA_LINK_COMPLETO_DO_VIDEO_AQUI)
+[![Vídeo Demonstração](https://img.youtube.com/vi/INSIRA_ID_DO_VIDEO/0.jpg)](youtube.com/watch?v=tavAso5dFQw&feature=youtu.be)
